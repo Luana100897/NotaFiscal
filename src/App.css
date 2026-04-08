@@ -1,0 +1,310 @@
+.nf-app {
+  min-height: 100vh;
+  padding: 14px;
+  color: #22272b;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 15% 10%, #ffe3c7 0%, transparent 35%),
+    radial-gradient(circle at 88% 16%, #dbefff 0%, transparent 30%),
+    linear-gradient(145deg, #fff8ef 0%, #f5f8fc 100%);
+}
+
+.nf-header {
+  max-width: 1100px;
+  margin: 0 auto 20px;
+}
+
+.nf-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.75rem;
+  color: #9c4a00;
+  font-weight: 700;
+}
+
+.nf-header h1 {
+  margin: 8px 0;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  font-size: 1.65rem;
+}
+
+.nf-subtitle {
+  margin: 0;
+  color: #4b5563;
+}
+
+.nf-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+  width: 100%;
+}
+
+.card {
+  background: #ffffffd6;
+  backdrop-filter: blur(6px);
+  border: 1px solid #d6dde6;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 10px 28px -22px #1d2d3f;
+  overflow: hidden;
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+.cols-2 {
+  grid-template-columns: 1fr;
+}
+
+.cols-4 {
+  grid-template-columns: 1fr;
+}
+
+.span-2 {
+  grid-column: auto;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #334155;
+  min-width: 0;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #c7d3e3;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  color: #1e293b;
+  font-size: 0.95rem;
+  width: 100%;
+  min-width: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #82b6f2;
+  outline-offset: 0;
+}
+
+.row-between {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #e4ebf2;
+  padding: 8px;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 0.86rem;
+}
+
+.money {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #0e9f6e;
+  color: #fff;
+}
+
+.btn-ghost {
+  background: #eaf2ff;
+  color: #1d4a82;
+}
+
+.btn-danger {
+  background: #ffe4e6;
+  color: #a2122f;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.resume-grid article {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d7e0ea;
+  background: #f8fbff;
+  display: grid;
+  gap: 4px;
+}
+
+.resume-grid article span {
+  font-size: 0.8rem;
+  color: #546375;
+}
+
+.resume-grid article strong {
+  font-size: 1rem;
+}
+
+.resume-grid .highlight {
+  background: #ecfdf5;
+  border-color: #9de9c9;
+}
+
+.obs {
+  margin-top: 12px;
+}
+
+.actions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: stretch;
+}
+
+.actions .btn {
+  width: 100%;
+}
+
+.ticket {
+  background: #fff;
+  border: 1px dashed #8aa0b7;
+  border-radius: 10px;
+  padding: 16px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.ticket hr {
+  border: 0;
+  border-top: 1px dashed #9cb0c5;
+  margin: 8px 0;
+}
+
+.ticket-title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.ticket-total {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+@media (min-width: 640px) {
+  .nf-app {
+    padding: 20px;
+  }
+
+  .nf-header h1 {
+    font-size: 1.95rem;
+  }
+
+  .row-between {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .resume-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .actions {
+    justify-content: flex-end;
+  }
+
+  .actions .btn {
+    width: auto;
+  }
+}
+
+@media (min-width: 980px) {
+  .nf-app {
+    padding: 32px;
+  }
+
+  .nf-header h1 {
+    font-size: clamp(1.8rem, 2.2vw, 2.2rem);
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .span-2 {
+    grid-column: span 2;
+  }
+
+  .resume-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media print {
+  .nf-app {
+    background: #fff;
+    padding: 0;
+  }
+
+  .nf-header,
+  .card:not(.cupom-preview) {
+    display: none;
+  }
+
+  .cupom-preview {
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    background: #fff;
+  }
+
+  .ticket {
+    border: 0;
+    border-radius: 0;
+  }
+}
